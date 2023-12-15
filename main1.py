@@ -52,20 +52,19 @@ def main():
     st.markdown(html_temp, unsafe_allow_html=True)
 
     # Project Overview section
-    st.subheader("Embark on a Mobile Companion")
+    st.subheader("Mobile Companion Journey Begins")
 
     # Project introduction
-    st.write("Explore Phone Price Prediction: Where Tech Meets Analytics!")
-    st.write("📱  Unlock mobile pricing insights with machine learning, decoding intricate patterns in device features for accurate predictions.")
-    st.write("💡 Embark on a data-driven journey into the mobile device realm, where each feature contributes to the symphony of pricing. Happy predicting! 🌟")
-
+    st.header("📱")
+    st.write("हमारी एप्लिकेशन पेश करते हैं! तुरंत जानें फ़ोन की मूल्य श्रेणी - कम लागत, मध्यम लागत, उच्च लागत, या बहुत उच्च लागत एक झलक में अपने खरीदारी निर्णय को सरल बनाये!")
+    st.write("ऐप्लिकेशन में, फोन की विशेषताओं के आधार पर आप तय कर सकते हैं कि आपने कम मूल्य, मध्यम मूल्य, उच्च मूल्य या बहुत उच्च मूल्य का फोन चयन किया है।")
     # Dynamic line plot showing variation of activity against features
-    st.subheader("Decoding the Symphony of Features 🎵📱")
+    # st.subheader("Decoding the Symphony of Features 🎵📱")
 
 
     
     # Sidebar inputs for model parameters
-    st.header("Input Parameters")
+    st.header("फ़ोन की विशेषताएँ")
     battery_power = st.number_input("Enter Battery Power", min_value=0.0, max_value=6000.0, value=0.0)
     blue = st.selectbox("Bluetooth", ["No", "Yes"], index=1)  # Default index set to 1 for "Yes"
     blue = 1 if blue == "Yes" else 0
@@ -102,13 +101,13 @@ def main():
     if st.button("Predict"):
         prediction = predict_activity(battery_power, blue, clock_speed, dual_sim, fc, four_g, int_memory, m_dep, mobile_wt, n_cores, pc, px_height, px_width, ram, sc_h, sc_w, talk_time, three_g, touch_screen, wifi)
         result = interpret_prediction(prediction[0])
-        st.success(f"The Person is: {result}")
+        st.success(f"The Phone is: {result}")
 
    
    
     # Contact section
     st.subheader("Contact 📧")
-    st.write("Contact us at us at [rajputabhishek4ever9@gmail.com]")
+    st.write("Contact us at [rajputabhishek4ever9@gmail.com]")
 
 if __name__ == '__main__':
     main()
