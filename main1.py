@@ -56,15 +56,15 @@ def main():
 
     # Project introduction
     st.header("📱")
-    st.write("हमारी एप्लिकेशन पेश करते हैं! तुरंत जानें फ़ोन की मूल्य श्रेणी - कम लागत, मध्यम लागत, उच्च लागत, या बहुत उच्च लागत एक झलक में अपने खरीदारी निर्णय को सरल बनाये!")
-    st.write("ऐप्लिकेशन में, फोन की विशेषताओं के आधार पर आप तय कर सकते हैं कि आपने कम मूल्य, मध्यम मूल्य, उच्च मूल्य या बहुत उच्च मूल्य का फोन चयन किया है।")
+    st.write("Introducing our application! Quickly discover the price range of phones - Low cost, Medium cost, High cost, or Very high cost. Simplify your shopping decisions at a glance!")
+    st.write("In the application, based on the features of the phone, you can determine whether you have chosen a phone with Low price, Medium price, High price, or Very high price.")
     # Dynamic line plot showing variation of activity against features
     # st.subheader("Decoding the Symphony of Features 🎵📱")
 
 
     
     # Sidebar inputs for model parameters
-    st.header("फ़ोन की विशेषताएँ")
+    st.header("Select Phone Features")
     battery_power = st.number_input("Enter Battery Power", min_value=0.0, max_value=6000.0, value=0.0)
     blue = st.selectbox("Bluetooth", ["No", "Yes"], index=1)  # Default index set to 1 for "Yes"
     blue = 1 if blue == "Yes" else 0
