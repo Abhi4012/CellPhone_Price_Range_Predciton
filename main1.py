@@ -51,6 +51,19 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
+    # Project Overview section
+    st.subheader("Embark on a Mobile Companion")
+
+    # Project introduction
+    st.write("Explore Phone Price Prediction: Where Tech Meets Analytics!")
+    st.write("📱  Unlock mobile pricing insights with machine learning, decoding intricate patterns in device features for accurate predictions.")
+    st.write("💡 Embark on a data-driven journey into the mobile device realm, where each feature contributes to the symphony of pricing. Happy predicting! 🌟")
+
+    # Dynamic line plot showing variation of activity against features
+    st.subheader("Decoding the Symphony of Features 🎵📱")
+
+
+    
     # Sidebar inputs for model parameters
     st.header("Input Parameters")
     battery_power = st.number_input("Enter Battery Power", min_value=0.0, max_value=6000.0, value=0.0)
@@ -91,30 +104,8 @@ def main():
         result = interpret_prediction(prediction[0])
         st.success(f"The Person is: {result}")
 
-    # Project Overview section
-    st.subheader("Embark on a Mobile Companion")
-
-    # Project introduction
-    st.write("Explore Phone Price Prediction: Where Tech Meets Analytics!")
-    st.write("📱  Unlock mobile pricing insights with machine learning, decoding intricate patterns in device features for accurate predictions.")
-    st.write("💡 Embark on a data-driven journey into the mobile device realm, where each feature contributes to the symphony of pricing. Happy predicting! 🌟")
-
-    # Dynamic line plot showing variation of activity against features
-    st.subheader("Decoding the Symphony of Features 🎵📱")
-
-    # features = ["Battery Power", "Clock Speed", "Dual SIM", "Front Cameras", "4G Support", "Internal Memory", "Mobile Depth", "Mobile Weight", "Number of Cores", "Primary Camera", "Pixel Resolution Height", "Pixel Resolution Width", "RAM", "Screen Height", "Screen Width", "Talk Time"]
-
-    # # Simulate a dynamic dance of data
-    # activity_values = np.random.rand(len(features))
-
-    # Create a vibrant visual representation
-    # plt.plot(features, activity_values, marker='o', color='#3498db')  # Blue color
-    # plt.xlabel("Mobile Features")
-    # plt.ylabel("Activity Level")
-    # plt.title("Harmony of Features: Unleashing Mobile Insights 📊")
-    # plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels
-    # st.pyplot(plt)
-
+   
+   
     # Contact section
     st.subheader("Contact 📧")
     st.write("Contact us at us at [rajputabhishek4ever9@gmail.com]")
